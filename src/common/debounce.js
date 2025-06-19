@@ -8,7 +8,7 @@ export function debounce(callbackFn, delay = 500) {
   let timeoutId;
 
   return function (...args) {
-    // Preserve this value of the callback lexical scope
+    // Preserve the "this" value of the callback lexical scope
     const self = this;
     clearTimeout(timeoutId);
     timeoutId = setTimeout(function () {
